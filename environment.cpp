@@ -65,10 +65,10 @@ void environment() {
             glColor3fv(selectedColor);
 
             glBegin(GL_QUADS);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 20.0f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 20.0f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 20.0f);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 20.0f);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.5f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.5f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.5f);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.5f);
             glEnd();
         }
     }
@@ -85,10 +85,10 @@ void environment() {
             glColor3fv(selectedColor);
 
             glBegin(GL_QUADS);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 20.0f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 20.0f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 20.0f);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 20.0f);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.5f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.5f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.5f);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.5f);
             glEnd();
         }
     }
