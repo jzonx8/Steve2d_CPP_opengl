@@ -125,6 +125,129 @@ void lineSteve(){
 
 void coloredSteve(){	
 	
+	/*Hair
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(43.0f, 30.0f, 13.0f);
+	glVertex2f(-4.0f,14.0f);
+	glVertex2f(4.0f,14.0f);
+	glVertex2f(4.0f,16.0f);
+	glVertex2f(-4.0f,16.0f);
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(43.0f, 30.0f, 13.0f);
+	glVertex2f(-4.0f,13.0f);
+	glVertex2f(-3.0f,13.0f);
+	glVertex2f(-3.0f,14.0f);
+	glVertex2f(-4.0f,14.0f);
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(43.0f, 30.0f, 13.0f);
+	glVertex2f(4.0f,13.0f);
+	glVertex2f(3.0f,13.0f);
+	glVertex2f(3.0f,14.0f);
+	glVertex2f(4.0f,14.0f);
+	glEnd();
+	*/
+	
+	// Hair
+	glBegin(GL_POLYGON);
+	convertRGBtoGLColor3f(63.0f, 42.0f, 21.0f);
+	glVertex2f(1.0f,15.0f);
+	glVertex2f(2.0f,15.0f);
+	glVertex2f(2.0f,16.0f);
+	glVertex2f(0.0f,16.0f);
+	glVertex2f(0.0f,14.0f);
+	glVertex2f(1.0f,14.0f);
+	glEnd();
+	
+	glBegin(GL_POLYGON);
+	convertRGBtoGLColor3f(63.0f, 42.0f, 21.0f);
+	glVertex2f(-1.0f,15.0f);
+	glVertex2f(-2.0f,15.0f);
+	glVertex2f(-2.0f,16.0f);
+	glVertex2f(0.0f,16.0f);
+	glVertex2f(0.0f,14.0f);
+	glVertex2f(-1.0f,14.0f);
+	glEnd();
+	
+	glBegin(GL_POLYGON);
+	convertRGBtoGLColor3f(51.0f, 36.0f, 17.0f);
+	glVertex2f(-3.0f,15.0f);
+	glVertex2f(-3.0f,14.0f);
+	glVertex2f(-1.0f,14.0f);
+	glVertex2f(-1.0f,15.0f);
+	glVertex2f(-2.0f,15.0f);
+	glVertex2f(-2.0f,16.0f);
+	glVertex2f(-4.0f,16.0f);
+	glVertex2f(-4.0f,15.0f);
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(36.0f, 24.0f, 8.0f);
+	glVertex2f(-4.0f,14.0f);
+	glVertex2f(-3.0f,14.0f);
+	glVertex2f(-3.0f,15.0f);
+	glVertex2f(-4.0f,15.0f);
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(43.0f, 30.0f, 13.0f);
+	glVertex2f(-4.0f,13.0f);
+	glVertex2f(-3.0f,13.0f);
+	glVertex2f(-3.0f,14.0f);
+	glVertex2f(-4.0f,14.0f);
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(51.0f, 36.0f, 17.0f);
+	glVertex2f(1.0f,14.0f);
+	glVertex2f(2.0f,14.0f);
+	glVertex2f(2.0f,15.0f);
+	glVertex2f(1.0f,15.0f);
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(51.0f, 36.0f, 17.0f);
+	glVertex2f(2.0f,15.0f);
+	glVertex2f(3.0f,15.0f);
+	glVertex2f(3.0f,16.0f);
+	glVertex2f(2.0f,16.0f);
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(63.0f, 42.0f, 21.0f);
+	glVertex2f(2.0f,15.0f);
+	glVertex2f(3.0f,15.0f);
+	glVertex2f(3.0f,16.0f);
+	glVertex2f(2.0f,16.0f);
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(43.0f, 30.0f, 13.0f);
+	glVertex2f(3.0f,15.0f);
+	glVertex2f(4.0f,15.0f);
+	glVertex2f(4.0f,16.0f);
+	glVertex2f(3.0f,16.0f);
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(51.0f, 36.0f, 17.0f);
+	glVertex2f(3.0f,14.0f);
+	glVertex2f(4.0f,14.0f);
+	glVertex2f(4.0f,15.0f);
+	glVertex2f(3.0f,15.0f);
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(52.0f, 37.0f, 18.0f);
+	glVertex2f(3.0f,13.0f);
+	glVertex2f(4.0f,13.0f);
+	glVertex2f(4.0f,14.0f);
+	glVertex2f(3.0f,14.0f);
+	glEnd();
+	
 	// Right Eye
 	glBegin(GL_QUADS);
 	glColor3f(1.0f, 1.0f, 1.0f);
@@ -159,42 +282,13 @@ void coloredSteve(){
 	glVertex2f(2.0f,12.0f);
 	glEnd();
 	
-	
-	glBegin(GL_QUADS);
-	convertRGBtoGLColor3f(43.0f, 30.0f, 13.0f);
-	glVertex2f(-4.0f,14.0f);
-	glVertex2f(4.0f,14.0f);
-	glVertex2f(4.0f,16.0f);
-	glVertex2f(-4.0f,16.0f);
-	glEnd();
-	
-	glBegin(GL_QUADS);
-	convertRGBtoGLColor3f(43.0f, 30.0f, 13.0f);
-	glVertex2f(-4.0f,13.0f);
-	glVertex2f(-3.0f,13.0f);
-	glVertex2f(-3.0f,14.0f);
-	glVertex2f(-4.0f,14.0f);
-	glEnd();
-	
-	glBegin(GL_QUADS);
-	convertRGBtoGLColor3f(43.0f, 30.0f, 13.0f);
-	glVertex2f(4.0f,13.0f);
-	glVertex2f(3.0f,13.0f);
-	glVertex2f(3.0f,14.0f);
-	glVertex2f(4.0f,14.0f);
-	glEnd();
-	
-	
-
-	
-	
 	// Mouth
 	glBegin(GL_QUADS);
-	convertRGBtoGLColor3f(104.0f, 64.0f, 48.0f);
-	glVertex2f(-1.0f,10.0f);
-	glVertex2f(1.0f,10.0f);
-	glVertex2f(1.0f,11.0f);
-	glVertex2f(-1.0f,11.0f);
+	convertRGBtoGLColor3f(106.0f, 64.0f, 48.0f);
+	glVertex2f(2.0f,14.0f);
+	glVertex2f(3.0f,14.0f);
+	glVertex2f(3.0f,15.0f);
+	glVertex2f(-2.0f,15.0f);
 	glEnd();
 	
 	// Chin
@@ -208,7 +302,7 @@ void coloredSteve(){
 	
 	// Beard
 	glBegin(GL_QUADS);
-	convertRGBtoGLColor3f(65.0f, 33.0f, 12.0f);
+	convertRGBtoGLColor3f(69.0f, 34.0f, 14.0f);
 	glVertex2f(-2.0f,9.0f);
 	glVertex2f(-1.0f,9.0f);
 	glVertex2f(-1.0f,10.0f);
@@ -272,6 +366,22 @@ void coloredSteve(){
 	glVertex2f(2.0f,-3.0f);
 	glEnd();
 	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(58.0f, 49.0f, 137.0f);
+	glVertex2f(1.0f, -3.0f); 
+	glVertex2f(2.0f,-3.0f); 
+	glVertex2f(2.0f,-2.0f);
+	glVertex2f(1.0f,-2.0f); 
+	glEnd();
+	
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(58.0f, 49.0f, 137.0f);
+	glVertex2f(2.0f, -4.0f); 
+	glVertex2f(3.0f,-4.0f); 
+	glVertex2f(3.0f,-3.0f);
+	glVertex2f(2.0f,-3.0f); 
+	glEnd();
+	
 	// Right Arm
 	glBegin(GL_QUADS);
 	convertRGBtoGLColor3f(187.0f, 137.0f, 114.0f);
@@ -292,27 +402,52 @@ void coloredSteve(){
 	
 	// Mid
 	glBegin(GL_LINES);
-	glColor3f(0.0f, 0.0f, 0.0f);
+	convertRGBtoGLColor3f(62.0f, 52.0f, 148.0f);
 	glVertex2f(0.0f, -2.0f);
-	glVertex2f(0.0f, -16.0f);
+	glVertex2f(0.0f, -14.0f);
 	glEnd();
+	
+	// Right Knee
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(58.0f, 49.0f, 137.0f);
+	glVertex2f(-3.0f,-10.0f);
+	glVertex2f(-1.0f,-10.0f);
+	glVertex2f(-1.0f,-9.0f);
+	glVertex2f(-3.0f,-9.0f);
+	glEnd();
+	
+	// Left Knee
+	glBegin(GL_QUADS);
+	convertRGBtoGLColor3f(58.0f, 49.0f, 137.0f);
+	glVertex2f(3.0f,-10.0f);
+	glVertex2f(1.0f,-10.0f);
+	glVertex2f(1.0f,-9.0f);
+	glVertex2f(3.0f,-9.0f);
+	glEnd();	
 	
 	// Right Leg
 	glBegin(GL_QUADS); 
-	convertRGBtoGLColor3f(70.0f, 58.0f, 165.0f);
+	convertRGBtoGLColor3f(70.0f, 58.0f, 164.0f);
 	glVertex2f(-4.0f,-14.0f);
 	glVertex2f(0.0f,-14.0f);
 	glVertex2f(0.0f,-2.0f);
 	glVertex2f(-4.0f,-2.0f);
 	glEnd();
 	
-	// left Leg
+	// Left Leg
 	glBegin(GL_QUADS);
-	convertRGBtoGLColor3f(70.0f, 58.0f, 165.0f);
+	convertRGBtoGLColor3f(70.0f, 58.0f, 164.0f);
 	glVertex2f(0.0f,-14.0f);
 	glVertex2f(4.0f,-14.0f);
 	glVertex2f(4.0f,-2.0f);
 	glVertex2f(0.0f,-2.0f);
+	glEnd();
+	
+	// Mid
+	glBegin(GL_LINES);
+	convertRGBtoGLColor3f(98.0f, 98.0f, 98.0f);
+	glVertex2f(0.0f, -14.0f);
+	glVertex2f(0.0f, -16.0f);
 	glEnd();
 	
 	// Feet
