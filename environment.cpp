@@ -38,8 +38,46 @@ void environment() {
     float squareSizeX = (40.0f * aspectRatio) / numCols; // Adjusted for 40.0f width
     float squareSizeY = 40.0f / numRows; // Adjusted for 40.0f height
     
+    // Grass
+    int greenRows[] = {13, 14, 15};
+
+    for (int rowIdx = 0; rowIdx < 3; rowIdx++) {
+        int row = greenRows[rowIdx];
+        for (int i = 0; i < numCols; i++) {
+            int randomIndex = rand() % 7;
+
+            float* selectedColor = greenShades[randomIndex];
+
+            glColor3fv(selectedColor);
+
+            glBegin(GL_QUADS);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.5f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.5f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.5f);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.5f);
+            glEnd();
+        }
+    }
     
-    for (int row = 9; row < numRows; row++) {
+    // Dirt
+    for (int row = 0; row <= 12; row++) {
+        for (int i = 0; i < numCols; i++) {
+            int randomIndex = rand() % 4;
+
+            float* selectedColor = brownColors[randomIndex];
+
+            glColor3fv(selectedColor);
+
+            glBegin(GL_QUADS);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.0f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.0f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.0f);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.0f);
+            glEnd();
+        }
+    }
+    
+    for (int row = 0; row < numRows; row++) {
         for (int col = 0; col < numCols; col++) {
             if ((row + col) % 2 == 0) {
                 glColor3f(0.44f, 0.73f, 0.88f);
@@ -157,43 +195,6 @@ void environment() {
 
     srand(time(NULL)); // Randomizer
 
-	// Dirt
-    for (int row = 0; row <= 12; row++) {
-        for (int i = 0; i < numCols; i++) {
-            int randomIndex = rand() % 4;
-
-            float* selectedColor = brownColors[randomIndex];
-
-            glColor3fv(selectedColor);
-
-            glBegin(GL_QUADS);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.0f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.0f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.0f);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.0f);
-            glEnd();
-        }
-    }
-
-	// Grass
-    int greenRows[] = {13, 14, 15};
-
-    for (int rowIdx = 0; rowIdx < 3; rowIdx++) {
-        int row = greenRows[rowIdx];
-        for (int i = 0; i < numCols; i++) {
-            int randomIndex = rand() % 7;
-
-            float* selectedColor = greenShades[randomIndex];
-
-            glColor3fv(selectedColor);
-
-            glBegin(GL_QUADS);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.0f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.0f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.0f);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.0f);
-            glEnd();
-        }
-    }
+	
 }
 }
