@@ -37,13 +37,14 @@ void environment() {
 
     float squareSizeX = (40.0f * aspectRatio) / numCols; // Adjusted for 40.0f width
     float squareSizeY = 40.0f / numRows; // Adjusted for 40.0f height
-
+    
+    
     for (int row = 0; row < numRows; row++) {
         for (int col = 0; col < numCols; col++) {
             if ((row + col) % 2 == 0) {
-                glColor3f(1.0f, 1.0f, 1.0f);
+                glColor3f(0.44f, 0.73f, 0.88f);
             } else {
-                glColor3fv(transparentGrey);
+                glColor3f(0.44f, 0.73f, 0.88f);
             }
 
             glBegin(GL_QUADS);
@@ -52,6 +53,94 @@ void environment() {
             glVertex2f((col + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 20.0f);
             glVertex2f(col * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 20.0f);
             glEnd();
+            // Clouds
+            glBegin(GL_QUADS); // Leftmost Cloud P1
+            glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(-30.0f, 18.0f);
+			glVertex2f(-15.0f, 18.0f);
+			glVertex2f(-15.0f, 15.0f);
+			glVertex2f(-30.0f, 15.0f);
+			glEnd();
+			glBegin(GL_QUADS); //Leftmost Cloud P2
+            glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(-30.0f, 15.0f);
+			glVertex2f(-24.0f, 15.0f);
+			glVertex2f(-24.0f, 9.0f);
+			glVertex2f(-30.0f, 9.0f);
+			glEnd();
+			glBegin(GL_QUADS); //Leftmost Cloud (Mid)
+			glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(-39.0f, 3.0f);
+			glVertex2f(-30.0f, 3.0f);
+			glVertex2f(-30.0f, 0.0f);
+			glVertex2f(-39.0f, 0.0f);
+			glEnd();
+			glBegin(GL_QUADS); //Leftmost Cloud (Mid)
+			glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(-39.0f, 6.0f);
+			glVertex2f(-30.0f, 6.0f);
+			glVertex2f(-30.0f, 0.0f);
+			glVertex2f(-39.0f, 0.0f);
+			glEnd();
+			glBegin(GL_QUADS); // Rightmost Cloud P1
+            glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(15.0f, 18.0f);
+			glVertex2f(30.0f, 18.0f);
+			glVertex2f(30.0f, 15.0f);
+			glVertex2f(15.0f, 15.0f);
+			glEnd();
+			glBegin(GL_QUADS); // Rightmost Cloud P2
+            glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(21.0f, 18.0f);
+			glVertex2f(30.0f, 18.0f);
+			glVertex2f(30.0f, 12.0f);
+			glVertex2f(21.0f, 12.0f);
+			glEnd();
+			glBegin(GL_QUADS); // Rightmost Cloud (Near Steve)
+            glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(6.0f, 6.0f);
+			glVertex2f(12.0f, 6.0f);
+			glVertex2f(12.0f, 3.0f);
+			glVertex2f(6.0f, 3.0f);
+			glEnd();
+			glBegin(GL_QUADS); // Rightmost Cloud (Near Steve P2)
+            glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(9.0f, 9.0f);
+			glVertex2f(12.0f, 9.0f);
+			glVertex2f(12.0f, 3.0f);
+			glVertex2f(9.0f, 3.0f);
+			glEnd();
+			
+			// Middle Upper Clouds
+			glBegin(GL_QUADS);
+            glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(-10.0f, 18.0f);
+			glVertex2f(0.0f, 18.0f);
+			glVertex2f(0.0f, 15.0f);
+			glVertex2f(-10.0f, 15.0f);
+			glEnd();
+			// Middle Right CLouds
+			glBegin(GL_QUADS);
+			glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(27.0f, 3.0f);
+			glVertex2f(36.0f, 3.0f);
+			glVertex2f(36.0f, 0.0f);
+			glVertex2f(27.0f, 0.0f);
+			glEnd();
+			//Lower Left Clouds
+			glBegin(GL_QUADS);
+			glColor3f(1.0f ,1.0f ,1.0f);
+            glVertex2f(-18.0f, -6.0f);
+			glVertex2f(-9.0f, -6.0f);
+			glVertex2f(-9.0f, -12.0f);
+			glVertex2f(-18.0f, -12.0f);
+			glEnd();
+			
+			
+			
+            
+            
+            
         }
 
     srand(time(NULL)); // Randomizer
@@ -65,11 +154,12 @@ void environment() {
             glColor3fv(selectedColor);
 
             glBegin(GL_QUADS);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.5f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.5f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.5f);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.5f);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 20.0f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 20.0f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 20.0f);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 20.0f);
             glEnd();
+            
         }
     }
 
@@ -85,12 +175,13 @@ void environment() {
             glColor3fv(selectedColor);
 
             glBegin(GL_QUADS);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.5f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 23.5f);
-            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.5f);
-            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 23.5f);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 20.0f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), row * squareSizeY - 20.0f);
+            glVertex2f((i + 1) * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 20.0f);
+            glVertex2f(i * squareSizeX - (20.0f * aspectRatio), (row + 1) * squareSizeY - 20.0f);
             glEnd();
-        }
-    }
-}
+            
+        	}
+    	}
+	}
 }
