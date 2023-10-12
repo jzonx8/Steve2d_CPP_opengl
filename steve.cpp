@@ -19,6 +19,66 @@ void lineSteve(){
 	glVertex2f(-4.0f,16.0f);
 	glVertex2f(-4.0f,8.0f);
 	glEnd();
+
+	glBegin(GL_LINES); //l eye
+	glColor3f(1,1,1);
+	glVertex2f(-3.0f, 11.0f);
+	glVertex2f(-2.0f, 11.0f);
+	
+	glVertex2f(-2.0f, 11.0f);
+	glVertex2f(-2.0f, 12.0f);
+	
+	glVertex2f(-2.0f, 12.0f);
+	glVertex2f(-3.0f, 12.0f);
+	
+	glVertex2f(-3.0f, 12.0f);
+	glVertex2f(-3.0f, 11.0f);
+	glEnd();
+	
+	glBegin(GL_LINES);
+	glColor3f(1,1,1);
+	glVertex2f(-2.0f, 11.0f);
+	glVertex2f(-1.0f, 11.0f);
+	
+	glVertex2f(-1.0f, 11.0f);
+	glVertex2f(-1.0f, 12.0f);
+	
+	glVertex2f(-1.0f, 12.0f);
+	glVertex2f(-2.0f, 12.0f);
+	
+	glVertex2f(-2.0f, 12.0f);
+	glVertex2f(-2.0f, 11.0f);
+	glEnd();
+	
+	glBegin(GL_LINES); //r eye
+	glColor3f(1,1,1);
+	glVertex2f(3.0f, 11.0f);
+	glVertex2f(2.0f, 11.0f);
+	
+	glVertex2f(2.0f, 11.0f);
+	glVertex2f(2.0f, 12.0f);
+	
+	glVertex2f(2.0f, 12.0f);
+	glVertex2f(3.0f, 12.0f);
+	
+	glVertex2f(3.0f, 12.0f);
+	glVertex2f(3.0f, 11.0f);
+	glEnd();
+	
+	glBegin(GL_LINES); 
+	glColor3f(1,1,1);
+	glVertex2f(2.0f, 11.0f);
+	glVertex2f(1.0f, 11.0f);
+	
+	glVertex2f(1.0f, 11.0f);
+	glVertex2f(1.0f, 12.0f);
+	
+	glVertex2f(1.0f, 12.0f);
+	glVertex2f(2.0f, 12.0f);
+	
+	glVertex2f(2.0f, 12.0f);
+	glVertex2f(2.0f, 11.0f);
+	glEnd();
 	
 	glBegin(GL_LINES); // Torso
 	glColor3f(0.08f,0.8f,0.87f);
