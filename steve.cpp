@@ -7,19 +7,55 @@ void convertRGBtoGLColor3f(float r, float g, float b) {
 }
 
 void lineSteve(){
+	
 	glLineWidth(3.0f);
-	glBegin(GL_LINES); // head
-	glColor3f(0.87f,0.65f,0.29f);
-	glVertex2f(-4.0f,8.0f);
-	glVertex2f(4.0f,8.0f);
-	glVertex2f(4.0f,8.0f);
-	glVertex2f(4.0f,16.0f);
+	glBegin(GL_LINE_STRIP); // hair
+	convertRGBtoGLColor3f(43.0f, 30.0f, 13.0f);
+	glVertex2f(-4.0f,13.0f);
+	glVertex2f(-3.0f,13.0f);
+	glVertex2f(-3.0f,14.0f);
+	glVertex2f(3.0f,14.0f);
+	glVertex2f(3.0f,13.0f);
+	glVertex2f(4.0f,13.0f);
 	glVertex2f(4.0f,16.0f);
 	glVertex2f(-4.0f,16.0f);
-	glVertex2f(-4.0f,16.0f);
-	glVertex2f(-4.0f,8.0f);
+	glVertex2f(-4.0f,13.0f);
 	glEnd();
-
+	
+	glLineWidth(3.0f);
+	glBegin(GL_LINE_STRIP); // mouth
+	convertRGBtoGLColor3f(106.0f, 64.0f, 48.0f);
+	glVertex2f(-1.0f,10.0f);
+	glVertex2f(1.0f,10.0f);
+	glVertex2f(1.0f,11.0f);
+	glVertex2f(-1.0f,11.0f);
+	glVertex2f(-1.0f,10.0f);
+	glEnd();
+	
+	glLineWidth(3.0f);
+	glBegin(GL_LINE_STRIP); // Beard
+	convertRGBtoGLColor3f(65.0f, 33.0f, 12.0f);
+	glVertex2f(-2.0f,8.0f);
+	glVertex2f(2.0f,8.0f);
+	glVertex2f(2.0f,10.0f);
+	glVertex2f(1.0f,10.0f);
+	glVertex2f(1.0f,9.0f);
+	glVertex2f(-1.0f,9.0f);
+	glVertex2f(-1.0f,10.0f);
+	glVertex2f(-2.0f,10.0f);
+	glVertex2f(-2.0f,8.0f);
+	glEnd();
+	
+	glLineWidth(3.0f);
+	glBegin(GL_LINE_STRIP); // ?
+	convertRGBtoGLColor3f(138.0f, 76.0f, 61.0f);
+	glVertex2f(-1.0f,9.0f);
+	glVertex2f(1.0f,9.0f);
+	glVertex2f(1.0f,10.0f);
+	glVertex2f(-1.0f,10.0f);
+	glVertex2f(-1.0f,9.0f);
+	glEnd();
+	
 	glBegin(GL_LINES); //l eye
 	glColor3f(1,1,1);
 	glVertex2f(-3.0f, 11.0f);
@@ -36,7 +72,7 @@ void lineSteve(){
 	glEnd();
 	
 	glBegin(GL_LINES);
-	glColor3f(1,1,1);
+	convertRGBtoGLColor3f(82.0f, 61.0f, 137.0f);
 	glVertex2f(-2.0f, 11.0f);
 	glVertex2f(-1.0f, 11.0f);
 	
@@ -66,7 +102,7 @@ void lineSteve(){
 	glEnd();
 	
 	glBegin(GL_LINES); 
-	glColor3f(1,1,1);
+	convertRGBtoGLColor3f(82.0f, 61.0f, 137.0f);
 	glVertex2f(2.0f, 11.0f);
 	glVertex2f(1.0f, 11.0f);
 	
@@ -79,6 +115,22 @@ void lineSteve(){
 	glVertex2f(2.0f, 12.0f);
 	glVertex2f(2.0f, 11.0f);
 	glEnd();
+	
+	
+	glLineWidth(3.0f);
+	glBegin(GL_LINES); // head
+	glColor3f(0.87f,0.65f,0.29f);
+	glVertex2f(-4.0f,8.0f);
+	glVertex2f(4.0f,8.0f);
+	glVertex2f(4.0f,8.0f);
+	glVertex2f(4.0f,16.0f);
+	glVertex2f(4.0f,16.0f);
+	glVertex2f(-4.0f,16.0f);
+	glVertex2f(-4.0f,16.0f);
+	glVertex2f(-4.0f,8.0f);
+	glEnd();
+	
+	
 	
 	glBegin(GL_LINES); // Torso
 	glColor3f(0.08f,0.8f,0.87f);
